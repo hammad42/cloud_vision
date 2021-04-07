@@ -1,10 +1,10 @@
 # Write to BQ Method
-def writeToBQ(documentEntities: dict):
+def writeToBQ(documentEntities: dict,table_id):
   from google.cloud import bigquery
   print("Inserting into BQ ************** ")
   #Insert into BQ    
   client = bigquery.Client()    
-  table_id = "elaborate-howl-285701.context.vision_json"      
+  #table_id = "elaborate-howl-285701.context.vision_json"      
   table = client.get_table(table_id)
 
   print ('Adding the row')
