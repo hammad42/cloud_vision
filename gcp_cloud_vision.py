@@ -27,7 +27,7 @@ def gcp_vision(uri,file_name):
     json_string = proto.Message.to_json(response)
 
     ############logos
-    logos=response.logo_annotations
+    '''logos=response.logo_annotations
 
     if not logos:
         logo_={'time_stamp':now,'file_name':file_name,'description':'empty','score':'0.0',"input_uri":uri}
@@ -66,7 +66,7 @@ def gcp_vision(uri,file_name):
             landmarks_={'time_stamp':now,'file_name':file_name,'description':desc,'score':score,'latitude':latitude,'longitude':longitude,"input_uri":uri}
             writeToBQ(landmarks_,"elaborate-howl-285701.context.image_landmark")
 
-    ###########text
+    ###########text'''
 
             
 
